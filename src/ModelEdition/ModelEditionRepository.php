@@ -8,7 +8,7 @@ use Carvago\VehicleCatalogue\SDK\AbstractExternalRepository;
 use Carvago\VehicleCatalogue\SDK\VehicleCatalogueClient;
 
 /**
- * @method array<ModelEdition> findAll();
+ * @method ModelEdition[] findAll();
  */
 class ModelEditionRepository extends AbstractExternalRepository
 {

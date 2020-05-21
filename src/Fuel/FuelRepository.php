@@ -8,7 +8,7 @@ use Carvago\VehicleCatalogue\SDK\AbstractExternalRepository;
 use Carvago\VehicleCatalogue\SDK\VehicleCatalogueClient;
 
 /**
- * @method array<Fuel> findAll();
+ * @method Fuel[] findAll();
  */
 class FuelRepository extends AbstractExternalRepository
 {
