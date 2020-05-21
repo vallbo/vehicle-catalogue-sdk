@@ -13,7 +13,7 @@ class Make
     /**
      * @var array<\Carvago\VehicleCatalogue\SDK\ModelFamily\ModelFamily>
      */
-    private array $modelFamilies;
+    private array $modelFamilies = [];
 
     /**
      * @return array<\Carvago\VehicleCatalogue\SDK\ModelFamily\ModelFamily>
