@@ -13,7 +13,7 @@ class ModelFamily
     /**
      * @var array<\Carvago\VehicleCatalogue\SDK\ModelEdition\ModelEdition>
      */
-    private array $modelEdition;
+    private array $modelEdition = [];
 
     /**
      * @return array<\Carvago\VehicleCatalogue\SDK\ModelEdition\ModelEdition>

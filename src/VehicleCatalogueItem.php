@@ -6,26 +6,9 @@ use Ramsey\Uuid\UuidInterface;
 
 trait VehicleCatalogueItem
 {
-    private UuidInterface $id;
-    private int $catalogueId;
-    private string $key;
-    private string $name;
-
-    /**
-     * @return UuidInterface
-     */
-    public function getId(): UuidInterface
-    {
-        return $this->id;
-    }
-
-    /**
-     * @param UuidInterface $id
-     */
-    public function setId(UuidInterface $id): void
-    {
-        $this->id = $id;
-    }
+    private ?int $catalogueId;
+    private ?string $key;
+    private ?string $name;
 
     /**
      * @return int
