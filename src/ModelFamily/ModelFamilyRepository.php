@@ -12,7 +12,7 @@ use Carvago\VehicleCatalogue\SDK\VehicleCatalogueClient;
  */
 class ModelFamilyRepository extends AbstractExternalRepository
 {
-    public const RESOURCE_URI = '/api/make';
+    public const RESOURCE_URI = '/api/model-family';
 
     /**
      * @param VehicleCatalogueClient $client
