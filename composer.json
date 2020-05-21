@@ -14,7 +14,10 @@
   },
   "require": {
     "php": "^7.4",
-    "symfony/http-client": "^5.0"
+    "symfony/http-client": "^5.0",
+    "symfony/serializer": "^5.0",
+    "symfony/property-access": "^5.0",
+    "ramsey/uuid": "^4.0"
   },
   "require-dev": {
     "povils/phpmnd": "^2.2",
