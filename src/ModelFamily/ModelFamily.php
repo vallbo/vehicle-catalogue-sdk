@@ -22,4 +22,12 @@ class ModelFamily
     {
         return $this->modelEdition;
     }
+
+    /**
+     * @param array<\Carvago\VehicleCatalogue\SDK\ModelEdition\ModelEdition> $modelEdition
+     */
+    public function setModelEdition(array $modelEdition): void
+    {
+        $this->modelEdition = $modelEdition;
+    }
 }

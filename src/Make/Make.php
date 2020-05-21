@@ -22,4 +22,12 @@ class Make
     {
         return $this->modelFamilies;
     }
+
+    /**
+     * @param array<\Carvago\VehicleCatalogue\SDK\ModelFamily\ModelFamily> $modelFamilies
+     */
+    public function setModelFamilies(array $modelFamilies): void
+    {
+        $this->modelFamilies = $modelFamilies;
+    }
 }
