@@ -8,7 +8,7 @@ use Carvago\VehicleCatalogue\SDK\AbstractExternalRepository;
 use Carvago\VehicleCatalogue\SDK\VehicleCatalogueClient;
 
 /**
- * @method array<Transmission> findAll();
+ * @method Transmission[] findAll();
  */
 class TransmissionRepository extends AbstractExternalRepository
 {
