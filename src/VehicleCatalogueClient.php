@@ -13,19 +13,19 @@ final class VehicleCatalogueClient
 {
     private HttpClientInterface $client;
 
-    public function __construct()
+    public function __construct(string $baseUri)
     {
-        $this->client = HttpClient::create();
+        $this->client = HttpClient::createForBaseUri($baseUri);
     }
 
     /**
-     * @param string $url
-     * @param array $options
+     * @param string $endpoint
+     * @param array<mixed> $options
      * @throws TransportExceptionInterface
      * @return ResponseInterface
      */
-    public function get(string $url, array $options = []): ResponseInterface
+    public function get(string $endpoint, array $options = []): ResponseInterface
     {
-        return $this->client->request('GET', $url, $options);
+        return $this->client->request('GET', $endpoint, $options);
     }
 }
