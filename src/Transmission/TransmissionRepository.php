@@ -12,6 +12,8 @@ use Carvago\VehicleCatalogue\SDK\VehicleCatalogueClient;
  */
 class TransmissionRepository extends AbstractExternalRepository
 {
+    public const RESOURCE_URI = '/api/transmission';
+
     /**
      * @param VehicleCatalogueClient $client
      */
