@@ -11,7 +11,7 @@ use Carvago\VehicleCatalogue\SDK\ModelEdition\ModelEditionRepository;
 use Carvago\VehicleCatalogue\SDK\ModelFamily\ModelFamilyRepository;
 use Carvago\VehicleCatalogue\SDK\Transmission\TransmissionRepository;
 
-final class VehicleCatalogue
+final class VehicleCatalogue implements VehicleCatalogueInterface
 {
     private MakeRepository $makeRepository;
     private ModelFamilyRepository $modelFamilyRepository;
@@ -45,7 +45,7 @@ final class VehicleCatalogue
     }
 
     /**
-     * @return array<\Carvago\VehicleCatalogue\SDK\Make\Make>
+     * @inheritDoc
      */
     public function getMakes(): array
     {
@@ -53,7 +53,7 @@ final class VehicleCatalogue
     }
 
     /**
-     * @return array<\Carvago\VehicleCatalogue\SDK\ModelFamily\ModelFamily>
+     * @inheritDoc
      */
     public function getModelFamilies(): array
     {
@@ -61,7 +61,7 @@ final class VehicleCatalogue
     }
 
     /**
-     * @return array<\Carvago\VehicleCatalogue\SDK\ModelEdition\ModelEdition>
+     * @inheritDoc
      */
     public function getModelEditions(): array
     {
@@ -69,7 +69,7 @@ final class VehicleCatalogue
     }
 
     /**
-     * @return array<\Carvago\VehicleCatalogue\SDK\Drive\Drive>
+     * @inheritDoc
      */
     public function getDrives(): array
     {
@@ -77,7 +77,7 @@ final class VehicleCatalogue
     }
 
     /**
-     * @return array<\Carvago\VehicleCatalogue\SDK\Fuel\Fuel>
+     * @inheritDoc
      */
     public function getFuels(): array
     {
@@ -85,7 +85,7 @@ final class VehicleCatalogue
     }
 
     /**
-     * @return array<\Carvago\VehicleCatalogue\SDK\Transmission\Transmission>
+     * @inheritDoc
      */
     public function getTransmissions(): array
     {
