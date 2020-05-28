@@ -22,6 +22,7 @@ return PhpCsFixer\Config::create()
             'throw',
         ]],
         'concat_space' => false,
+        'phpdoc_inline_tag' => false,
     ])
     ->setFinder($finder)
 ;
