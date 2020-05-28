@@ -4,35 +4,54 @@ declare(strict_types=1);
 
 namespace Carvago\VehicleCatalogue\SDK;
 
+use Carvago\VehicleCatalogue\SDK\BodyColor\BodyColor;
+use Carvago\VehicleCatalogue\SDK\BodyType\BodyType;
+use Carvago\VehicleCatalogue\SDK\Drive\Drive;
+use Carvago\VehicleCatalogue\SDK\Fuel\Fuel;
+use Carvago\VehicleCatalogue\SDK\Make\Make;
+use Carvago\VehicleCatalogue\SDK\ModelEdition\ModelEdition;
+use Carvago\VehicleCatalogue\SDK\ModelFamily\ModelFamily;
+use Carvago\VehicleCatalogue\SDK\Transmission\Transmission;
+
 interface VehicleCatalogueInterface
 {
     /**
-     * @return array<\Carvago\VehicleCatalogue\SDK\Make\Make>
+     * @return Make[]
      */
     public function getMakes(): array;
 
     /**
-     * @return array<\Carvago\VehicleCatalogue\SDK\ModelFamily\ModelFamily>
+     * @return ModelFamily[]
      */
     public function getModelFamilies(): array;
 
     /**
-     * @return array<\Carvago\VehicleCatalogue\SDK\ModelEdition\ModelEdition>
+     * @return ModelEdition[]
      */
     public function getModelEditions(): array;
 
     /**
-     * @return array<\Carvago\VehicleCatalogue\SDK\Drive\Drive>
+     * @return Drive[]
      */
     public function getDrives(): array;
 
     /**
-     * @return array<\Carvago\VehicleCatalogue\SDK\Fuel\Fuel>
+     * @return Fuel[]
      */
     public function getFuels(): array;
 
     /**
-     * @return array<\Carvago\VehicleCatalogue\SDK\Transmission\Transmission>
+     * @return Transmission[]
      */
     public function getTransmissions(): array;
+
+    /**
+     * @return BodyColor[]
+     */
+    public function getBodyColors(): array;
+
+    /**
+     * @return BodyType[]
+     */
+    public function getBodyTypes(): array;
 }

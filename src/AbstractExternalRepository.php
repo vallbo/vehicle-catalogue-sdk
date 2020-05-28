@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Carvago\VehicleCatalogue\SDK;
 
+use InvalidArgumentException;
 use Symfony\Component\Serializer\Encoder\JsonEncoder;
 use Symfony\Component\Serializer\Normalizer\ArrayDenormalizer;
 use Symfony\Component\Serializer\Normalizer\ObjectNormalizer;
@@ -24,8 +25,8 @@ abstract class AbstractExternalRepository
      */
     public function __construct(
         VehicleCatalogueClient $client,
-        string $entityClass)
-    {
+        string $entityClass
+    ) {
         $this->client = $client;
         $this->entityClass = $entityClass;
 
@@ -35,13 +36,18 @@ abstract class AbstractExternalRepository
     }
 
     /**
-     * @return array<object>
+     * @return object[]
      */
     public function findAll(): array
     {
         $response = $this->client->get($this->getListEndpoint());
+        $data = $this->serializer->deserialize($response->getContent(), $this->getArrayOfEntityClass(), 'json');
 
-        return $this->serializer->deserialize($response->getContent(), $this->getArrayOfEntityClass(), 'json');
+        if (!is_array($data)) {
+            throw new InvalidArgumentException('Method findAll must return an array.');
+        }
+
+        return $data;
     }
 
     /**
@@ -73,6 +79,6 @@ abstract class AbstractExternalRepository
      */
     protected function getArrayOfEntityClass(): string
     {
-        return sprintf("%s[]", $this->getEntityClass());
+        return sprintf('%s[]', $this->getEntityClass());
     }
 }
