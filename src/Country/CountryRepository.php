@@ -2,23 +2,23 @@
 
 declare(strict_types=1);
 
-namespace Carvago\VehicleCatalogue\SDK\BodyColor;
+namespace Carvago\VehicleCatalogue\SDK\Country;
 
 use Carvago\VehicleCatalogue\SDK\AbstractExternalRepository;
 use Carvago\VehicleCatalogue\SDK\VehicleCatalogueClient;
 
 /**
- * @method BodyColor[] findAll(string $locale);
+ * @method Country[] findAll(string $locale);
  */
-class BodyColorRepository extends AbstractExternalRepository
+class CountryRepository extends AbstractExternalRepository
 {
-    public const RESOURCE_URI = '/api/body-color';
+    public const RESOURCE_URI = '/api/country';
 
     /**
      * @param VehicleCatalogueClient $client
      */
     public function __construct(VehicleCatalogueClient $client)
     {
-        parent::__construct($client, BodyColor::class);
+        parent::__construct($client, Country::class);
     }
 }

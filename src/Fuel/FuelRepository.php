@@ -8,7 +8,7 @@ use Carvago\VehicleCatalogue\SDK\AbstractExternalRepository;
 use Carvago\VehicleCatalogue\SDK\VehicleCatalogueClient;
 
 /**
- * @method Fuel[] findAll();
+ * @method Fuel[] findAll(string $locale);
  */
 class FuelRepository extends AbstractExternalRepository
 {

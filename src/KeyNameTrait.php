@@ -2,12 +2,12 @@
 
 declare(strict_types=1);
 
-namespace Carvago\VehicleCatalogue\SDK\BodyType;
+namespace Carvago\VehicleCatalogue\SDK;
 
-class BodyType
+trait KeyNameTrait
 {
-    private string $key;
-    private string $name;
+    protected string $key;
+    protected string $name;
 
     /**
      * @return string

@@ -9,6 +9,7 @@
 >
     <php>
         <ini name="error_reporting" value="-1" />
+        <var name="CATALOGUE_ENDPOINT" value="https://vehiclecatalogue.dev.teas.carvagotest.com"/>
     </php>
 
     <testsuites>
