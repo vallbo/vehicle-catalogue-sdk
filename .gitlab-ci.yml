@@ -1,6 +1,7 @@
 stages:
     - build
     - test
+    - post
 
 composer:
     stage: build
@@ -67,3 +68,9 @@ phpvdc:
     image: dockette/php:7.4
     script:
         - composer phpvdc
+
+satis:
+    stage: post
+    image: curlimages/curl:7.70.0
+    script:
+        - curl -X POST $SATIS_URL
