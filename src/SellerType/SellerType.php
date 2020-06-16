@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace Carvago\VehicleCatalogue\SDK\BodyColor;
+namespace Carvago\VehicleCatalogue\SDK\SellerType;
 
 use Carvago\VehicleCatalogue\SDK\KeyNameTrait;
 
-class BodyColor
+class SellerType
 {
     use KeyNameTrait;
 }

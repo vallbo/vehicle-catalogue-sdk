@@ -36,11 +36,19 @@ abstract class AbstractExternalRepository
     }
 
     /**
+     * @param string $locale
      * @return object[]
      */
-    public function findAll(): array
+    public function findAll(string $locale): array
     {
-        $response = $this->client->get($this->getListEndpoint());
+        $response = $this->client->get(
+            $this->getListEndpoint(),
+            [
+                'headers' => [
+                    'Accept-Language' => $locale,
+                ],
+            ]
+        );
         $data = $this->serializer->deserialize($response->getContent(), $this->getArrayOfEntityClass(), 'json');
 
         if (!is_array($data)) {
